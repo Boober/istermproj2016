@@ -1,0 +1,11 @@
+.btn-xlarge {
+    padding: 50px 50px;
+    font-size: 22px;
+    width:250px;
+    height:250px;
+    word-wrap: break-word;
+    line-height: normal;
+    -webkit-border-radius: 30px;
+       -moz-border-radius: 30px;
+            border-radius: 50px;
+    }

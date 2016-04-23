@@ -1,0 +1,270 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Hayden POS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript" src="js/highcharts.js"></script>
+		<script type="text/javascript" src="js/modules/exporting.js"></script>
+		<script src="js/bootstrap.js"> </script>
+		<script type="text/javascript">
+		$(function () {
+    		$('#graph1').highcharts({
+        		title: {
+            text: 'stock levels for slippers',
+            x: -20 //center
+        },
+        xAxis: {
+        	title: {
+                text: 'time'},
+            categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satruday',
+                'Sunday']
+        },
+        yAxis: {
+            title: {
+                text: 'Number of Customers'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'Customer(average)'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Shadyside',
+            data: [100,91,81,71,48,33,10]
+        }, {
+            name: 'Downtown',
+            data: [100,81,71,61,48,33,19]
+        }]
+    });
+});
+		</script>
+		<script type="text/javascript">
+	/*script to draw hours of operation graph*/
+		$(function () {
+    		$('#graph2').highcharts({
+        		title: {
+            text: 'Stock levels for boots',
+            x: -20 //center
+        },
+        xAxis: {
+        	title: {
+                text: 'time'},
+            categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satruday',
+                'Sunday']
+        },
+        yAxis: {
+            title: {
+                text: 'Number of Customers'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'Customer(average)'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Shadyside',
+            data: [100,90,77,65,50,20,2]
+        }, {
+            name: 'Downtown',
+            data: [100,100,90,70,57,33,5]
+        }]
+    });
+});
+		</script>
+		<script type="text/javascript">
+$(function () {
+    $('#January').highcharts({
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: 'Item Sales for January'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['Boots', 38.0],
+                ['Shoes', 159.0],
+                {
+                    name: 'Flip-Flops',
+                    y: 534.0,
+                    sliced: true,
+                    selected: true
+                }
+            ]
+        }]
+    });
+});
+		</script>
+
+		<script type="text/javascript">
+$(function () {
+    $('#February').highcharts({
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: 'Item Sales for February'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['Boots', 27.0],
+                ['Shoes', 287.0],
+                {
+                    name: 'Flip-Flops',
+                    y: 498.0,
+                    sliced: true,
+                    selected: true
+                }
+            ]
+        }]
+    });
+});
+		</script>
+		<script type="text/javascript">
+$(function () {
+    $('#March').highcharts({
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: 'Item Sales for March'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['Shoes', 157.0],
+                ['Boots', 319.0],
+                {
+                    name: 'Flip-Flops',
+                    y: 512.0,
+                    sliced: true,
+                    selected: true
+                }
+            ]
+        }]
+    });
+});
+		</script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<h1>Stock data</h1>
+			<div class="row">
+				<div  class="col-sm-6" >
+					<div id="graph1"></div>
+				</div>
+				<div class="col-sm-6" >
+					<div id="graph2"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div  class="col-sm-4" >
+					<div id="January"></div>
+				</div>
+				<div class="col-sm-4" >
+					<div id="February"></div>
+				</div>
+				<div class="col-sm-4" >
+					<div id="March"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="btn btn-default btn-sm" href"https://mail.google.com/mail/?view=cm&fs=1&to=kbokil@andrew.cmu.edu">Emergency Restock</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="btn btn-default btn-sm" href"mailto:repouhe@andrew.cmu.edu">Regular Top Up</div>
+				</div>
+					<a class="btn btn-default btn-sm" href="index.html">Main menu</a>
+				</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
